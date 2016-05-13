@@ -1,0 +1,66 @@
+/*
+
+text-align: right;
+text-align: center;
+
+color: orange;
+background-color: green;
+font-size: 30px;
+font-weight: bold;
+font-weight: normal;
+
+*/
+
+p:first-letter {
+	font-size: 30px;
+	color: red;
+}
+
+p em {
+	background-color: green;
+	color: white;
+}
+
+div:nth-child(even) h2 {
+	color: orange;
+}
+
+div:nth-child(odd) h2 {
+	color: blue;
+}
+
+ul > li {
+	font-weight: bold;
+}
+
+ol > li {
+	font-weight: normal;
+}
+
+ol.fruits-list li {
+	color: grey;
+}
+
+ol.vegetables-list li {
+	color: red;
+}
+
+div:nth-child(odd) ul li ol.fruits-list li {
+	color: green;
+}
+
+thead tr td {
+	font-weight: bold;
+	text-align: center;
+}
+tbody tr td:first-child {
+	color: orange;
+}
+
+tbody tr td:nth-child(n+2) {
+	background-color: green;
+	color: white;
+	text-align: center;
+	font-weight: bold;
+}
+
