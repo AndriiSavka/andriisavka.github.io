@@ -1,0 +1,62 @@
+input {
+	display: none;
+}
+
+label[for="red"] {
+	color: red;
+	text-decoration: underline;
+	font-weight: bold;
+}
+label[for="green"] {
+	color: green;
+	text-decoration: underline;
+	font-weight: bold;
+}
+label[for="blue"] {
+	color: blue;
+	text-decoration: underline;
+	font-weight: bold;
+}
+
+span.red {
+color: white;
+background-color: red;
+border-radius: 7px;
+padding: 5px;
+font-weight: bold;
+}
+
+span.green {
+color: white;
+background-color: green;
+border-radius: 7px;
+padding: 5px;
+font-weight: bold;
+}
+
+span.blue {
+color: white;
+background-color: blue;
+border-radius: 7px;
+padding: 5px;
+font-weight: bold;
+}
+
+	/*по состоянию checked включать/выключать 
+	соответствующие элементы*/
+
+
+#red:checked ~ .red
+{
+	display: none;
+}
+
+#green:checked ~ .green
+{
+	display: none;
+}
+
+#blue:checked ~ .blue
+{
+	display: none;
+}
