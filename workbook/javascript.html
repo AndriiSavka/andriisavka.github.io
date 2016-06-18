@@ -1,23 +1,547 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>javascript help</title>
-	<link rel="stylesheet" href="style.css">
-</head>
-<body>
+	<head>
+		<meta charset="UTF-8">
+		<title>javascript help</title>
+		<link rel="stylesheet" href="style.css">
+		<script src="js.js"></script>
+	</head>
+	<body>
+		<!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
 		<h1>Javascript help</h1>
 		<div>
-			<p></p>
-			<p></p>
-			<p></p>
-			<p></p>
-			<p></p>
-			<p></p>
-			<p></p>
-			<p></p>
-			<p></p>
-			<p></p>
-		</div>
+			<h3>Змінні</h3>
+			<p>
+				<code>var </code>- оголошення змінної; <br>
+				for example: <code> var myMessage; </code>
+			</p>
+			<p><code>var myMesage;<br>
+				myMessage = "Hello, User!";</code> - записти дані в змінну;
+			</p>
+			<p><code>var myMesage;<br>
+				myMessage = "Hello, User!";<br>
+				alert(myMessage);</code> - вивести повідомлення;
+			</p>
+			<p><code>var myMesage;<br>
+				myMessage = "Hello, User!";<br>
+				alert(myMessage);<br><br>
+				myMessage = "Bye, User!";</code> - дані можна перезаписувати;<br>
+				<code>alert(myMessage);</code>
+			</p>
+			<p>Для назв змінних існує 3 обмеження: <br>
+				<ol>
+					<li>Ім’я може складатись з:
+						<ul>
+							<li> букв ;</li>
+							<li> цифр ;</li>
+							<li> символів $ ;</li>
+							<li> _ ;</li>
+						</ul>
+					</li>
+					<li>Назви змінних не можуть починатись з цифри;</li>
+					<li>Не можна використовувати в якості назви змінної зарезервовані слова;</li>
+				</ol>
+			</p>
+			<p>
+				<h3>Правила вибору назви змінної</h3>
+				<ol>
+					<li>Ніякого трансліту, тільки англійська;</li>
+					<li>Короткі імена можна давати тільки змінним, які не несуть смислового навантаження, наприклад індексам;</li>
+					<li>Змінні, що складаються з кількох слів, пишуться в camelCase;</li>
+					<li>Ім’я змінної має чітко відповідати її змісту.</li>
+				</ol>
+			</p>
+			<h3>Типи даних</h3>
+			<ol>
+				<li>Число &lsaquo;&lsaquo; number &rsaquo;&rsaquo; ;</li>
+				<li>Стрічка &lsaquo;&lsaquo; string &rsaquo;&rsaquo; ;</li>
+				<li>Логічний тип (булевий) - Boolean ;</li>
+				<li>Спеціальне значення &lsaquo;&lsaquo; null &rsaquo;&rsaquo; ;</li>
+				<li>Спеціальне значення &lsaquo;&lsaquo; undefine &rsaquo;&rsaquo; ;</li>
+			</ol>
+			<h4>Тип число</h4>
+			<p><code>var numver = 123;</code> - оголошення цілого числа;<br>
+				<code>var anotherNumber = 123.456;</code> - оголошення дробового числа;
+			</p>
+			<p><code>alert(1/0);</code><br>
+			infinity - безкінечність, наприклад ділення на нуль;</p>
+			<p><code>alert(2 * 'notANumber');</code>
+			Nan - not a number</p>
+			<h4>Тип стрічка</h4>
+			<p><code>var str = 'My string';</code> - об’явлення стрічки;<br>
+			<code>var str = "My string";</code> - те саме об’явлення стрічки;</p>
+			<h4>Логічний або булевий тип</h4>
+			<p><code>var checked = true;<br>
+			checked = false;</code></p>
+			<h4>Спецыальне значення null</h4>
+			<p><code>var age = null; </code> - це означає, що зміна оголошена, але її значення ще невідоме;</p>
+			<h4>Спеціальний тип undefined</h4>
+			<p><code>var x;<br> alert (x);</code> - описує стан значення - неприсвоєний</p>
+			<h3>6. Тип - об’єкт &lsaquo;&lsaquo; object &rsaquo;&rsaquo;</h3>
+			<p>
+				<code> var user = &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {name: &nbsp;&nbsp;&nbsp; "Вася"};</code><br>
+				назва об’єкта &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; властивість &nbsp;&nbsp;&nbsp; значення;
+			</p>
+			<p>example: <br>
+				<code>
+				var obj = {<br>
+				&nbsp;&nbsp;&nbsp;name: "John",<br>
+				&nbsp;&nbsp;&nbsp;surname: "Smith",<br>
+				&nbsp;&nbsp;&nbsp;jobs: {<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;first: "Makler",<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;second: "Broker" <br>
+				&nbsp;&nbsp;&nbsp;} <br>
+				}; <br>
+				</code>
+			</p>
+			<h3>Масиви (array)</h3>
+			<p><code>
+				var arr = ['one', 'two', 'three'];
+			</code></p>
+			<p><code>
+				var anotherArr = ['one', 2, 3, true];
+			</code></p>
+			<h4>Вивести конкретний індекс масиву</h4>
+			<p><code>
+				var arr = ['one', 'two', 'three'];<br>
+				alert(arr[0]);
+			</code></p>
+			<h4>Переприсвоїти елемент масиву</h4>
+			<p><code>var arr = ['one', 'two', 'three'];<br>
+				<br>
+				arr[1] = 'ten';<br>
+				alert(arr);
+			</code></p>
+			<h4>Визначити довжину масиву</h4>
+			<p>
+				<code>var arr = ['one', 'two', 'three'];<br>
+				alert(arr.length);
+				</code>
+			</p>
+			<h4>Додавання та видалення елементів з масиву (методи)</h4>
+			<p>
+				<code>
+				var arr = ['one', 'two', 'three'];</code><br>
+				<br>
+				&nbsp;&nbsp;&nbsp;<code>arr.push('four', 'five');</code> - додоє елементи в кінець масиву і повертає його нову довжину;<br>
+				&nbsp;&nbsp;&nbsp;...
+				<br>
+				&nbsp;&nbsp;&nbsp;<code>arr.pop(); </code> - видаляє елементи з кінця масиву і повертає його нову довжину;
+				<br>
+				&nbsp;&nbsp;&nbsp;<code>arr.unshift('zero'); </code> - додає елемент(и) на початок масиву та повертає його нову довжину;
+				<br>
+				&nbsp;&nbsp;&nbsp;<code>arr.shift(); </code> - видаляє елемент(и) на початку масиву та повертає його нову довжину;
+			</p>
+			<hr>
+			<h4>Операції з масивом (методи)</h4>
+			<p>
+				<code>
+				var arr = [1, 2, 3, 4, 5];
+				<br>
+				console.log(arr);</code>
+			</p>
+			<hr>
+			<p>
+				<code>
+				var str = arr.join();
+				</code> - перетворення масиву даних в одну стрічку (метод <code>join</code>);<br>
+				<code>console.log(str);</code>
+				<br>
+				&nbsp;&nbsp;&nbsp; <code>var str = arr.join('la')</code> - методу <code>join</code> можна передавати не обов’язковий аргумент (символ або стрічка, по замовчуванню - кома), які будуть відділяти елементи один від одного; <br>
+			</p>
+			<hr>
+			<p>
+				<code>
+				arr.reverse();<br>
+				console.log(arr);
+				</code> - відобразити елементи в зворотньому порядку (method <code>reverse</code>);
+			</p>
+			<hr>
+			<h4>Сортування чисел</h4>
+			<p>
+				<code>
+				var arr = [15, 6, 0, 1, 2, 3, 4, 5];<br>
+				console.log(arr);<br>
+				arr.sort();
+				</code> - метод, який сортує елементи масиву (але сортує, як стрічку);
+				<code>console.log(arr);</code><br>
+				<code>
+				arr.sort(function (a, b){<br>
+				&nbsp;&nbsp;&nbsp; return a - b;<br>
+				});<br> - тоже сортує, але методом різниці;
+				</code>
+			</p>
+			<h4>Сортування стрічки</h4>
+			<p>
+				<code>
+				var fruits = ["Banana", "Orange", "Apple", "Mango"];	 <br>
+				fruits.sort(); </code> - сортування елементів по алфавіту; <br>
+				<code>console.log(fruits);</code>
+			</p>
+			<h4>Method slice</h4>
+			<p>
+				<code>
+				var fruits = ["Banana", "Orange", "Apple", "Mango"]; <br>
+				var myFruits = fruits.slice(0, 2); </code> - повертає вказаний фрагмент масиву;<br>
+				<code>console.log(myFruits);</code>
+			</p>
+			<h4>Універсальний метод вставки або видалення елементів splice</h4>
+			<p>
+				<code>
+				var fruits = ["Banana", "Orange", "Apple", "Mango"]; <br>
+				fruits.splice(2, 0, "Lemon", "Kiwi"); </code> - перший параметр передає (2) з якого елементу додати 2 елемента ("Lemon", "Kiwi"), другий параметр (0) - скільки видалити елементів масиву;<br>
+				<code>console.log(fruits);</code>
+			</p>
+			<p>
+				<code>var fruits = ["Banana", "Orange", "Apple", "Mango"]; <br>
+				fruits.splice(2, 1); </code>
+				- починаючи з 2-ї позиції видалити 1 елемент (тобто "Apple");<br>
+				<code>console.log(fruits);</code>
+			</p>
+			<h3>Арифметика та присвоєння. Основні математичні оператори Javascript</h3>
+			<p>
+				<ol>
+					<li>Стандартні оператори: "+", "-", "/", "*"
+						<p>
+							<code>
+							var a = 5;<br>
+							var b = 6;<br>
+							<br>
+							console.log(a + b);
+							</code>
+						</p>
+						&nbsp;&nbsp;&nbsp;&nbsp;Also
+						<p>
+							<code>
+							var f = 'my' + 'String';<br>
+							<br>
+							console.log(f);
+							</code>
+						</p>
+						&nbsp;&nbsp;&nbsp;&nbsp;Also
+						<p>
+							<code>
+							console.log('1' + 1); </code> - буде <code>11 </code>;
+						</p>
+					</li>
+					<li>Інкремент: "++" - збільшення змінної на 1;
+						<p>
+							<code>
+							var i = 2;<br>
+							i++;<br>
+							<br>
+							console.log(i);
+							</code>
+						</p>
+					</li>
+					<li>Декремент: "--" - зменшення змінної на 1;
+						<p>
+							<code>
+							var i = 2;<br>
+							i--;<br>
+							<br>
+							console.log(i);
+							</code>
+						</p>
+						<p><b>можна застосовувати тільки до змінних:</b><br>
+						<code>console.log(5++)</code> - так не працює</p>
+					</li>
+					<li>Оператори порівняння: "<" ">", "<=" ">=", "==", "==="
+						<p>
+							<code>=</code> - означає присвоїти;<br>
+							<code>==</code> - означає перевірити рівність;<br>
+							<code>===</code> - перевірка не тільки на рівні значень, але й на рівність типів;
+						</p>
+					</li>
+					<li>"Не рівно" - "!=" або "!=="
+						<p>
+							<code>console.log('01' !== 1);</code><br>
+							<code>console.log('01' != 1);</code>
+						</p>
+					</li>
+				</ol>
+			</p>
+			<h3>Взаємодія з користувачем</h3>
+			<ol>
+				<li>Alert =>
+					<code> alert('Message');</code>
+					<p><code></code></p>
+				</li>
+				<li>Prompt =>
+					<code>var result = prompt(title, default);</code>
+					<p>Виводить модальне вікно prompt із заголовком <code>title</code> і полем для вводу тексту(можна підставляти дефолтний набір тексту замість <code>default</code>), кнопку <code>ok</code> та <code>cancel</code>;<br>
+						Prompt повертає те, що ввів користувач і присвоєю змінній <code>result</code> (якщо ok,а якщо cancel - то null);
+					<code></code></p>
+					<p>Наприклад: <br>
+						<code>
+						var name = prompt('What is your name?', 'Jo') <br>
+						<br>
+						alert('You name is:' + name);
+						</code>
+					</p>
+					<p>P.S. <b>+prompt</b> - означає приведення до числа;</p>
+				</li>
+				<li>Confirm =>
+					<code>var result = confirm(question);</code>
+					<p>Виводить модальне вікно з запитанням <code>question</code> і 2-ма кнопками - <code>OK & CANCEL</code>;<br>
+						Змінній <code>result</code> присвоїться <code>true</code>, якщо користувач натисне <code>OK</code> та <code>false</code>, якщо <code>CANCEL</code>.
+					</p>
+					<p>
+						<code>
+						var isAdult = confirm('Are you adult?');<br>
+						<br>
+						alert('is adult = ' + isAdult);
+						</code>
+					</p>
+				</li>
+			</ol>
+			<h3>Оператор умови if</h3>
+			<p>
+				<code>
+				if(condition) {
+				//
+				} else {
+				//
+				}
+				</code>
+			</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Наприклад: <br><br>
+				<code>
+				var year = +prompt('When Javascript first appeard?', '');<br>
+				if (year === 1995) {<br>
+				&nbsp;&nbsp;&nbsp;alert('You are right!');<br>
+				} else {<br>
+				&nbsp;&nbsp;&nbsp;alert('I'm disappointed...');<br>
+				}
+				</code>
+			</p>
+			<p>Коли декілька умов: <br><br>
+				<code>
+				var year = +prompt('When Javascript first appeard?', '');<br>
+				if (year === 1995) {<br>
+				&nbsp;&nbsp;&nbsp;alert('You are right!');<br>
+				} else if (1900 < year && year < 2000) {<br>
+				&nbsp;&nbsp;&nbsp;alert('You were close...'); <br>
+				} else {<br>
+				&nbsp;&nbsp;&nbsp;alert('I'm disappointed...');<br>
+				}
+				</code>
+			</p>
+			<h4>Довгий тип запису</h4>
+			<p>
+				<code>
+				var age = prompt('How old are you', ''); <br>
+				<br>
+				var access;<br>
+				if (age > 18) {<br>
+				&nbsp;&nbsp;&nbsp;access = true;<br>
+				} else {<br>
+				&nbsp;&nbsp;&nbsp;access = false;<br>
+				} <br>
+				<br>
+				alert(access);
+				</code>
+			</p>
+			<h4>Скорочений тип запису</h4>
+			<p>
+				<code>
+				var age = prompt('How old are you', ''); <br>
+				<br>
+				var access;<br>
+				<br>
+				access = age > 18 ? true : false;<br>
+				<br>
+				alert(access);
+				</code>
+			</p>
+			<h3>Цикл - багаторазове використання коду</h3>
+			<p>Повторення циклу називається <i>ітерацією</i></p>
+			<h4>Види циклі:</h4>
+			<ol>
+				<li>
+					<h4>while</h4>
+					<p><code>
+						while (condition) { <br>
+						&nbsp;&nbsp;&nbsp;// <br>
+						}
+					</code></p>
+					<p>Наприклад: <br>
+						<br>
+						<code>var i = 0;<br>
+						while (i < 3) {<br>
+						&nbsp;&nbsp;&nbsp;alert(i);<br>
+						&nbsp;&nbsp;&nbsp;i++;<br>
+						}
+					</code></p>
+				</li>
+				<li>
+					<h4>do while</h4>
+					<p>
+						<code>do {<br>
+						&nbsp;&nbsp;&nbsp;//
+						} while (condition);
+						</code>
+					</p>
+					<p>Наприклад: <br>
+						<br>
+						<code>var i = 0;<br>
+						<br>
+						do {<br>
+						&nbsp;&nbsp;&nbsp;alert(i);<br>
+						&nbsp;&nbsp;&nbsp;i++;<br>
+						} while (i < 3);
+						</code>
+					</p>
+				</li>
+				<li>
+					<h4>Цикл for</h4>
+					<p>
+						<code>
+						for (beginning; condition; step) {<br>
+						&nbsp;&nbsp;&nbsp;// code <br>
+						}
+						</code>
+					</p>
+					<p>Наприклад: <br>
+						<br>
+						<code>
+						for (var i = 0; i < 3; i++) { <br>
+						&nbsp;&nbsp;&nbsp;alert(i); <br>
+						}
+						</code><br>
+						<p>Наприклад 2: <br>
+							<br>
+							<code>var i = 0; <br>
+							for (; i < 3; i++) { <br>
+							&nbsp;&nbsp;&nbsp;alert(i); <br>
+						}</code></p>
+					</p>
+				</li><li>
+				<h4></h4>
+				<p>
+					<code>
+					</code>
+				</p>
+				<p>Наприклад:
+					<code>
+					</code>
+				</p>
+			</li>
+		</ol>
+		<h3>Директива break (для переривання циклів)</h3>
+		<p>Наприклад <br>
+			<br>
+			<code>while (true) {<br>
+			&nbsp;&nbsp;&nbsp;var value = prompt('Enter number: ', '');<br>
+			<br>
+			&nbsp;&nbsp;&nbsp;if (value == null) {<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;<br>
+			&nbsp;&nbsp;&nbsp;} <br>
+			&nbsp;&nbsp;&nbsp;alert('Your number is:' + value);<br>
+			}
+			</code>
+		</p>
+		<h3>Директива continue (для пропускання ітерацій)</h3>
+		<p>Наприклад<br>
+			<br>
+			<code>for(var i = 0; i < 4; i++){ <br>
+			&nbsp;&nbsp;&nbsp;if (i === 2) { <br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;continue;<br>
+			&nbsp;&nbsp;&nbsp;} <br>
+			&nbsp;&nbsp;&nbsp;alert(i); <br>
+			}
+			</code>
+		</p>
+		<h3>Цикли та масиви</h3>
+		<p>
+			<code>
+			var fruits = ["Banana", "Orange", "Apple", "Mango"];<br>
+			<br>
+			for (var i = 0; i < fruits.length; i++) {<br>
+			&nbsp;&nbsp;&nbsp;alert(fruits[i]); <br>
+			}
+			</code>
+		</p>
+		<h3>Цикли та об’єкти</h3>
+		<h4>Ітератор for in</h4>
+		<p>
+			<code>
+			var person = { <br>
+			&nbsp;&nbsp;&nbsp;firstName:"John"; <br>
+			&nbsp;&nbsp;&nbsp;lastName:"Doe"; <br>
+			&nbsp;&nbsp;&nbsp;age:25; <br>
+			};<br>
+			<br>
+			for (var key in person) { <br>
+			&nbsp;&nbsp;&nbsp;alert(person[key]); <br>
+			}
+			</code>
+		</p>
+		<h3>Конструкція switch</h3>
+		<p>
+			<code>
+			var value = +prompt('2 + 2 =', '');<br>
+			<br>
+			if (value === 3) { <br>
+			&nbsp;&nbsp;&nbsp;alert('More...'); <br>
+			} else if (value === 4) { <br>
+			&nbsp;&nbsp;&nbsp;alert('Great!'); <br>
+			}	else if (value === 5) { <br>
+			&nbsp;&nbsp;&nbsp;alert('Less...'); <br>
+			} else { <br>
+			&nbsp;&nbsp;&nbsp;alert('I don't know this value...'); <br>
+			}
+			</code>
+		</p>
+		<p>Конструкція switch <br>
+			<code>
+			var value = +prompt('2 + 2 =', '');<br>
+			switch(value) { <br>
+			&nbsp;&nbsp;&nbsp;case 3: <br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;alert('More...'); <br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break; <br>
+			&nbsp;&nbsp;&nbsp;case 4: <br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;alert('Great!'); <br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break; <br>
+			&nbsp;&nbsp;&nbsp;case 5: <br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;alert('Less...'); <br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break; <br>
+			&nbsp;&nbsp;&nbsp;default: <br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;alert('I don't know this value...');  <br>
+			}
+			</code>
+		</p>
+		<h3>ФУНКЦІЇ</h3>
+		<h4>Функція - це блок коду, який визначається один раз і може викликатись багаторазово.</h4>
+		<p>
+			<code>
+			function name (params, separated, by, comas) {<br>
+			&nbsp;&nbsp;&nbsp;// code body <br>
+			} <br>
+			<br>
+			name(params, separated, by, comas) - виклик функції;<br>
+			</code>
+		</p>
+		<p>Наприклад 1<br>
+			<br>
+			<code>
+			<i>function</i> count () {<br>
+			&nbsp;&nbsp;&nbsp;var num1 = 1;<br>
+			&nbsp;&nbsp;&nbsp;var num2 = 2;<br>
+			&nbsp;&nbsp;&nbsp;var num3 = 3;<br>
+			<br>
+			&nbsp;&nbsp;&nbsp;var sum = num1 + num2 + num3;<br>
+			<br>
+			&nbsp;&nbsp;&nbsp;console.log(sum);<br>
+			} <br>
+			<br>
+			count();
+			</code>
+		</p>
+		<p>Наприклад 2<br>
+			<code>
+			</code>
+		</p>
+	</div>
 </body>
 </html>
