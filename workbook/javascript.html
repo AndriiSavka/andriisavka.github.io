@@ -522,6 +522,7 @@
 			name(params, separated, by, comas) - виклик функції;<br>
 			</code>
 		</p>
+		<h4>Function declaration</h4>
 		<p>Наприклад 1<br>
 			<br>
 			<code>
@@ -539,7 +540,76 @@
 			</code>
 		</p>
 		<p>Наприклад 2<br>
+			<br>
 			<code>
+			<i>function</i> count (num1) {<br>
+			&nbsp;&nbsp;&nbsp;var num2 = 2;<br>
+			&nbsp;&nbsp;&nbsp;var num3 = 3;<br>
+			<br>
+			&nbsp;&nbsp;&nbsp;var sum = num1 + num2 + num3;<br>
+			<br>
+			&nbsp;&nbsp;&nbsp;console.log(sum);<br>
+			} <br>
+			<br>
+			count(2);
+			</code>
+		</p>
+		<p>Наприклад 3<br>
+			<br>
+			<code>
+			<i>function</i> count (num1, num2, num3) {<br>
+			<br>
+			&nbsp;&nbsp;&nbsp;var sum = num1 + num2 + num3;<br>
+			<br>
+			&nbsp;&nbsp;&nbsp;console.log(sum);<br>
+			} <br>
+			<br>
+			count(2, 3, 4);
+			</code>
+		</p>
+		<p>Наприклад 4<br>
+			<br>
+			<code>
+			<i>function</i> count (num1, num2, num3) {<br>
+			<br>
+			&nbsp;&nbsp;&nbsp;var num1 = num1 || 1;<br>
+			&nbsp;&nbsp;&nbsp;var num2 = num2 || 2;<br>
+			&nbsp;&nbsp;&nbsp;var num3 = num3 || 3;<br>
+			<br>
+			&nbsp;&nbsp;&nbsp;var sum = num1 + num2 + num3;<br>
+			<br>
+			&nbsp;&nbsp;&nbsp;console.log(sum);<br>
+			} <br>
+			<br>
+			count(2, 3, 4);<br>
+			<br>
+			count(15, 15); <br>
+			<br>
+			count(10);
+			</code>
+		</p>
+
+
+		<p>Наприклад 5<br>
+			<br>
+			<code>
+			count(2, 3, 4);<br>
+			<br>
+			count(15, 15); <br>
+			<br>
+			count(10);<br>
+			<br>
+			<i>function</i> count (num1, num2, num3) {<br>
+			<br>
+			&nbsp;&nbsp;&nbsp;var num1 = num1 || 1;<br>
+			&nbsp;&nbsp;&nbsp;var num2 = num2 || 2;<br>
+			&nbsp;&nbsp;&nbsp;var num3 = num3 || 3;<br>
+			<br>
+			&nbsp;&nbsp;&nbsp;var sum = num1 + num2 + num3;<br>
+			<br>
+			&nbsp;&nbsp;&nbsp;console.log(sum);<br>
+			} <br>
+			
 			</code>
 		</p>
 	</div>
